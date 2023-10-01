@@ -3,18 +3,18 @@ import "../styles/global.css";
 
 const Navbar = lazy(() => import("../components/NavBar"));
 
-const Home = () => {
+const DayCare = () => {
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
         <Navbar />
       </Suspense>
       <div className="container">
-        <h1>Dog Hotel Home Page</h1>
-        <p>content</p>
+        <h1>Day care</h1>
+        <p>content..</p>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default DayCare;
