@@ -28,6 +28,7 @@
   .container {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 2%;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -52,20 +53,20 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #444343;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   }
   
   .dropdown-content a {
-    color: #333;
+    color: #faf8f8;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #595757;
   }
   
   .dropdown:hover .dropdown-content {

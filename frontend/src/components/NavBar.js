@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import "../styles/NavLinks.css";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul>
+      <ul className="nav-links">
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -36,6 +37,12 @@ const Navbar = () => {
         </li>
         <li>
           <Link href="/ContactPage">Contact Us</Link>
+        </li>
+        <li>
+          <Link href="/Login">Login</Link>
+        </li>
+        <li>
+          <Link href="/SignUp">Sign up</Link>
         </li>
       </ul>
     </nav>
