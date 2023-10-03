@@ -3,7 +3,8 @@ import "../styles/global.css";
 
 const Navbar = lazy(() => import("../components/NavBar"));
 
-const SignUp = () => {
+const SignUp  = () => {
+
   return (
     <div>
       <Suspense fallback={<div>Loading...</div>}>
@@ -11,7 +12,6 @@ const SignUp = () => {
       </Suspense>
       <div className="container">
         <h1>Sign up page</h1>
-        <p></p>
       </div>
     </div>
   );
