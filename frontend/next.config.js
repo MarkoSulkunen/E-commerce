@@ -1,12 +1,7 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
-    async rewrites() {
-      return [
-        // Rewrite everything else to use `pages/index`
-        {
-          source: '/:path*',
-          destination: '/',
-        },
-      ];
-    },
-  };
+const nextConfig = {
+  reactStrictMode: true,
+  distDir: 'out',
+  output: 'export'
+}
+
+module.exports = nextConfig
