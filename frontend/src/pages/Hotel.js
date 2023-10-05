@@ -1,14 +1,10 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import "../styles/global.css";
 
-const Navbar = lazy(() => import("../components/NavBar"));
 
 const Hotel = () => {
   return (
-    <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
-      </Suspense>
+    <div id="section-hotel">
       <div className="container">
         <h1>Hotel</h1>
         <p>content..</p>

@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import "../styles/NavLinks.css";
+import "../../styles/NavLinks.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -30,19 +31,19 @@ const Navbar = () => {
           {isDropdownOpen && (
             <div className="dropdown-content">
               <Link href="/Hotel">Hotel</Link>
-              <Link href="/Spa">Spa</Link>
-              <Link href="/DayCare">Day care</Link>
+              <Link href="/#section-spa">Spa</Link>
+              <Link href="/#section-daycare">Day care</Link>
             </div>
           )}
         </li>
         <li>
-          <Link href="/ContactPage">Contact Us</Link>
+          <NavLink to="/ContactPage">Contact Us</NavLink>
         </li>
         <li>
-          <Link href="/Login">Login</Link>
+          <Link href="/LogIn">Login</Link>
         </li>
         <li>
-          <Link href="/SignUp">Sign up</Link>
+          <Link href="/#section-signup">Sign up</Link>
         </li>
       </ul>
     </nav>

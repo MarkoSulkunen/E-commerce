@@ -1,20 +1,16 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import "../styles/global.css";
+import Layout from '../components/Layout';
 
-const Navbar = lazy(() => import("../components/NavBar"));
-
-const Home = () => {
+const Myapp = () => {
   return (
-    <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
-      </Suspense>
+    <Layout>
       <div className="container">
         <h1>Dog Hotel Home Page</h1>
         <p>content</p>
       </div>
-    </div>
+    </Layout>
   );
 };
 
-export default Home;
+export default Myapp;
