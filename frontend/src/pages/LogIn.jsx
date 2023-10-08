@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useRef, useContext } from "react";
 import { useMutation } from "react-query";
 import "../styles/global.css";

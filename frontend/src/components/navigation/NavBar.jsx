@@ -1,8 +1,8 @@
-"use client";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import "../../styles/NavLinks.css";
 import { NavLink } from "react-router-dom";
+import "../../styles/NavLinks.css";
+import { useContext } from "react";
+import { AuthContext } from "../../context/auth-context";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav>
       <ul className="nav-links">
         <li>
-          <Link href="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li
           className="dropdown"
@@ -30,20 +30,20 @@ const Navbar = () => {
           <a href="#">Services &#9662;</a>
           {isDropdownOpen && (
             <div className="dropdown-content">
-              <Link href="/Hotel">Hotel</Link>
-              <Link href="/#section-spa">Spa</Link>
-              <Link href="/#section-daycare">Day care</Link>
+              <NavLink to="/hotel">Hotel</NavLink>
+              <NavLink to="/spa">Spa</NavLink>
+              <NavLink to="/daycare">Day care</NavLink>
             </div>
           )}
         </li>
         <li>
-          <NavLink to="/ContactPage">Contact Us</NavLink>
+          <NavLink to="/contactpage">Contact Us</NavLink>
         </li>
         <li>
-          <Link href="/LogIn">Login</Link>
+          <NavLink to="/login">Login</NavLink>
         </li>
         <li>
-          <Link href="/#section-signup">Sign up</Link>
+          <NavLink to="/signup">Sign up</NavLink>
         </li>
       </ul>
     </nav>

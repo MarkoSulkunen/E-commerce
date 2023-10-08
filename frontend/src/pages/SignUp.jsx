@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useRef, useContext } from "react";
 import { useMutation } from "react-query";
 import "../styles/global.css";
@@ -10,9 +8,8 @@ import { AuthContext } from "../context/auth-context";
 import { signUpUser } from "../api/users";
 import "../styles/Authenticate.css";
 
-const SignUp  = () => {
+const SignUp  = (props) => {
   const auth = useContext(AuthContext);
-  const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -31,7 +28,6 @@ const SignUp  = () => {
     event.preventDefault();
 
     signUpUserMutation.mutate({
-      name: nameRef.current.value,
       email: emailRef.current.value,
       password: passwordRef.current.value,
     });
@@ -42,7 +38,6 @@ const SignUp  = () => {
       <div className="container">
         <h1>Sign up</h1>
         <form  onSubmit={onSubmitHandler}>
-        <Input ref={nameRef} type="text" label="Name" id="signup-name" />
         <Input ref={emailRef} type="email" label="Email" />
         <Input ref={passwordRef} type="password" label="Password" />
         <Button type="submit">{"SIGNUP"}</Button>
