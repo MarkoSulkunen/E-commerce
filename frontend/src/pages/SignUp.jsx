@@ -6,7 +6,7 @@ import Button from "../components/button/Button";
 import { AuthContext } from "../context/auth-context";
 
 import { signUpUser } from "../api/users";
-import "../styles/Authenticate.css";
+import "../styles/authenticate.css";
 
 const SignUp  = (props) => {
   const auth = useContext(AuthContext);
