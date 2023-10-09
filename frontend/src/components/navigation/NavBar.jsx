@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/auth-context";
 
 const Navbar = () => {
+  const auth = useContext(AuthContext);
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -39,12 +41,21 @@ const Navbar = () => {
         <li>
           <NavLink to="/contactpage">Contact Us</NavLink>
         </li>
+        {!auth.isLoggedIn && (
         <li>
           <NavLink to="/login">Login</NavLink>
         </li>
+      )}
+            {!auth.isLoggedIn && (
         <li>
-          <NavLink to="/signup">Sign up</NavLink>
+          <NavLink to="/signup">SignUp</NavLink>
         </li>
+      )}
+        {auth.isLoggedIn && (
+        <li>
+          <button onClick={auth.logout}>LOGOUT</button>
+        </li>
+      )}
       </ul>
     </nav>
   );

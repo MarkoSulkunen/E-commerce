@@ -119,7 +119,6 @@ function App() {
         userId: userId,
         login: login,
         logout: logout,
-        name: name,
         email: email,
       }}
     >

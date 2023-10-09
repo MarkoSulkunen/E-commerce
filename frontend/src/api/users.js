@@ -1,4 +1,8 @@
 export const signUpUser = async ({email, password}) => {
+    console.log("signup api here: ");
+    console.log(`${import.meta.env.VITE_API_URL}/api/users/signup`);
+    console.log(email);
+    console.log(password)
     const res = await fetch(
       `${import.meta.env.VITE_API_URL}/api/users/signup`,
       {

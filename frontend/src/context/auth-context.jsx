@@ -6,20 +6,17 @@ export const AuthContext = createContext({
   userId: null,
   login: () => {},
   logout: () => {},
-  name: "",
   email: "",
 });
 
 export const AuthContextProvider = (props) => {
   const [token, setToken] = useState(null);
   const [userId, setUserId] = useState(null);
-  const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
 
-  const loginHandler = (id, token, name, email) => {
+  const loginHandler = (id, token, email) => {
     setToken(token);
     setUserId(id);
-    setName(name);
     setEmail(email);
   };
 
@@ -34,7 +31,6 @@ export const AuthContextProvider = (props) => {
     userId: userId,
     login: loginHandler,
     logout: logoutHandler,
-    name: name,
     email: email,
   };
 

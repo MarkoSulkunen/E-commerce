@@ -29,16 +29,6 @@
       color: white;
       text-decoration: none;
     }
-    .nav-links button {
-      border: 1px solid rgb(76, 74, 74);
-      color: rgb(10, 10, 10);
-      background: #121240;
-    }
-    
-    .nav-links button:hover,
-    .nav-links button:active {
-      background: #121223;
-      color: #faf9f9;
-    }
+
   }
   
