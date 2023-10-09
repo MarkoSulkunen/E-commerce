@@ -16,7 +16,6 @@ const LogIn = (props) => {
   const loginUserMutation = useMutation({
     mutationFn: loginUser,
     onSuccess: (data) => {
-      console.log("login data: ", data);
       auth.login(data.id, data.token);
     },
     onError: (error) => {
