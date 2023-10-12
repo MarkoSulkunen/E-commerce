@@ -32,9 +32,13 @@ const Navbar = () => {
           <a href="#">Services &#9662;</a>
           {isDropdownOpen && (
             <div className="dropdown-content">
-              <NavLink to="/hotel">Hotel</NavLink>
-              <NavLink to="/spa">Spa</NavLink>
-              <NavLink to="/daycare">Day care</NavLink>
+              <NavLink to="/daycare">Dog Babysitting</NavLink>
+              <NavLink to="/therapy">Dog mental therapy </NavLink>
+              <NavLink to="/dogcare">Dog Care Services </NavLink>
+              <NavLink to="/medical">Medical Care  </NavLink>
+              <NavLink to="/spa">Spa & Wellness</NavLink>
+              <NavLink to="/salon">Salon services</NavLink>
+
             </div>
           )}
         </li>

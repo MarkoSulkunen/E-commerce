@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/global.css";
-
+import Calendar from 'react-calendar';
 
 const Spa = () => {
+  const [value, onChange] = useState(new Date());
+
   return (
-    <div id="section-spa">
+    <div>
       <div className="container">
-        <h1>Spa</h1>
-        <p>content..</p>
+        <h1>Spa & Wellness</h1>
+        <p></p>
+        <div>
+        <Calendar onChange={onChange} value={value} />
       </div>
+      </div>
+
     </div>
   );
 };

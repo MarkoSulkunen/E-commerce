@@ -34,13 +34,12 @@ h1 {
 }
 
 button {
-  border-radius: 50px;
-  border: 1px solid transparent;
+
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #696868;
+  background-color: #8ba69b;
   cursor: pointer;
   transition: border-color 0.25s;
 }
