@@ -45,6 +45,9 @@ const Navbar = () => {
         <li>
           <NavLink to="/contactpage">Contact Us</NavLink>
         </li>
+        <li>
+          <NavLink to="/Reservations">Make a reservation</NavLink>
+        </li>
         {!auth.isLoggedIn && (
         <li>
           <NavLink to="/login">Login</NavLink>

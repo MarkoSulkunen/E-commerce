@@ -8,8 +8,6 @@ router.post('/signup', signUpUser);
 router.post('/login', loginUser);
 //router.post('/check-email', checkResetPassword);
 //router.patch('/reset-password', updatePassword);
-
-
 router.get('/:id', getUserById);
 router.get('/', getUsers);
 

@@ -172,11 +172,6 @@ const updatePassword = async (req, res) => {
     if(!result[0]) {
       return res.status(401).send('Invalid email');
     }
-    //const user = result[0];
-
-    /*if (users.reset_Token !== token) {
-      return res.status(401).send('Invalid reset token');
-    }*/
 
     const hashedPassword = await bcrypt.hash(newPassword, 12);
     await users.setNewPassword(email,token, hashedPassword);
