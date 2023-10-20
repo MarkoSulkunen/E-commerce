@@ -5,7 +5,7 @@ export const getReservations = async () => {
   return await res.json();
 };
 
-export const createReservations = async ({ email,service,date, token}) => {
+export const createReservations = async ({ email,service,date,token}) => {
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/api/reservations`,
     {
