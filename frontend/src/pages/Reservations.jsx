@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useQuery } from 'react-query';
+import { useMutation, useQueryClient, useQuery } from 'react-query';
+//import { useHistory } from "react-router-dom";
 import moment from 'moment';
 import 'moment-timezone';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
@@ -17,7 +18,10 @@ const Reservations = () => {
   const [newReservationTitle, setNewReservationTitle] = useState('');
   const [selectedSlotInfo, setSelectedSlotInfo] = useState(null);
 
-  const { email } = useContext(AuthContext);
+  const auth = useContext(AuthContext);
+  const queryClient = useQueryClient();
+
+  //const history = useHistory();
 
   const { data, isLoading, isError } = useQuery('reservationData', getReservations);
 
@@ -40,7 +44,16 @@ const Reservations = () => {
     );
   };
 
-  const handleCreateReservation = async () => {
+  const createReservationMutation = useMutation({
+    mutationFn: createReservations,
+    onSuccess: () => {
+      queryClient.invalidateQueries("reservations");
+      history.push("/");
+    },
+  });
+
+  const handleCreateReservation = (event) => {
+    event.preventDefault();
     if (newReservationTitle && selectedSlotInfo) {
       const { start, end } = selectedSlotInfo;
 
@@ -49,25 +62,12 @@ const Reservations = () => {
         start: start,
         end: end,
       };
-
-      try {
-        const response = await createReservations({
-          email: email,
+        createReservationMutation.mutate({
+          email: auth.email,
           service: reservation.title,
           date: reservation.start,
+          token: auth.token,
         });
-
-        if (response && response.status === 'success') {
-          setEvents([...events, reservation]);
-
-          setNewReservationTitle('');
-          setShowForm(false);
-        } else {
-          console.error('Reservation creation failed.');
-        }
-      } catch (error) {
-        console.error('API request error:', error);
-      }
     }
   };
 

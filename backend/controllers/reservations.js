@@ -29,7 +29,7 @@ const getReservationById = async (req, res) => {
     }
   };
   
-  const createReservation = async (req, res) => {
+  const createReservations = async (req, res) => {
     const schema = Joi.object({
       email: Joi.string().min(1).required(),
       service: Joi.string().min(1).required(),
@@ -54,6 +54,6 @@ module.exports = {
 
     getReservations,
     getReservationById,
-    createReservation,
+    createReservations,
     deleteReservation
   };

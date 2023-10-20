@@ -5,7 +5,7 @@ export const getReservations = async () => {
   return await res.json();
 };
 
-export const createReservations = async ({ email,service,date}) => {
+export const createReservations = async ({ email,service,date, token}) => {
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/api/reservations`,
     {
@@ -13,7 +13,7 @@ export const createReservations = async ({ email,service,date}) => {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        Authorization: 'Bearer ' + token
+        Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
         email,
@@ -32,7 +32,7 @@ export const deleteReservations = async ({ id,token }) => {
     {
       method: 'DELETE',
       headers: {
-        Authorization: 'Bearer ' + token
+        Authorization: `Bearer ${token}`
       }
     }
   );
