@@ -23,6 +23,5 @@ CREATE TABLE IF NOT EXISTS `reservations` (
   UNIQUE KEY `email_unique` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `reservations` (`id`, `email`, `service1`, `date`) VALUES (UUID(), 'test@example.com', 'service1', '2023-10-15 12:00:00');
-INSERT INTO `reservations` (`id`, `email`, `service2`, `date`) VALUES (UUID(), 'test@example.com', 'service1', '2023-10-15 12:00:00');
+INSERT INTO `reservations` (`id`, `email`, `service`, `date`) VALUES (UUID(), 'test@example.com', 'service1', '2023-10-15 12:00:00');
 
