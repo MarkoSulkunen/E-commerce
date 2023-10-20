@@ -8,7 +8,7 @@ const { createReservations, deleteReservations, getReservations, getReservations
 router.get('/', getReservations);
 //router.get('/:id', getReservationsById);
 router.use(verifyToken);
-//router.post('/', createReservations);
+router.post('/', createReservations);
 //router.delete('/:id', deleteReservations);
 
 module.exports = router;
