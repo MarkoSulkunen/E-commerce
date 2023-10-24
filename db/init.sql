@@ -24,4 +24,5 @@ CREATE TABLE IF NOT EXISTS `reservations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `reservations` (`id`, `email`, `service`, `date`) VALUES (UUID(), 'test@example.com', 'service1', '2023-10-15 12:00:00');
+INSERT INTO `reservations` (`id`, `email`, `service`, `date`) VALUES (UUID(), 'test@example.com', 'service2', '2023-10-20 12:00:00');
 

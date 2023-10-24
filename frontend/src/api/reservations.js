@@ -23,7 +23,12 @@ export const createReservations = async ({ email,service,date,token}) => {
     }
   );
   
-  return await res.json();
+  console.log('API Response:', res);
+
+  const data = await res.json();
+  console.log('Parsed Response Data:', data);
+  
+  return data;
 };
 
 export const deleteReservations = async ({ id,token }) => {

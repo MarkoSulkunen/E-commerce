@@ -94,7 +94,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
-        <Route path="reservations*" element={<Reservations />} />
+        <Route path="reservations/*" element={<Reservations />} />
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />
@@ -109,7 +109,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
-        <Route path="reservations*" element={<Reservations />} />
+        <Route path="reservations/*" element={<Reservations />} />
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />
