@@ -10,11 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.14",
     "dotenv": "^16.3.1",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-big-calendar": "^1.8.4",
     "react-calendar": "^4.6.0",
+    "react-datepicker": "^4.21.0",
+    "react-datetime-picker": "^5.5.3",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.17.0"

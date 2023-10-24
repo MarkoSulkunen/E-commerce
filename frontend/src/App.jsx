@@ -59,7 +59,7 @@ function App() {
     localStorage.removeItem("userData");
   }, []);
 
-  /* useEffect to check if user fata exists in local storage and if the token is still valid */
+  /* useEffect to check if user data exists in local storage and if the token is still valid */
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem("userData"));
     console.log("stored data: ", storedData);
