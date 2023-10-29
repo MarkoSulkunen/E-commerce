@@ -54,7 +54,6 @@ const Reservations = () => {
 
   const availableTimeSlots = getAvailableTimeSlots(selectedDate, events);
 
-   // Creating mutation to add a product
    const createReservationMutation = useMutation({
     mutationFn: createReservations,
     onSuccess: () => {
