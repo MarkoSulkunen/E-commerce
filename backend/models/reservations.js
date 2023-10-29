@@ -16,7 +16,7 @@ const reservations = {
     });
   }),
 
-  findreservationById: (id) => new Promise((resolve, reject) => {
+  findReservationById: (id) => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if(err) {
         return reject(err);

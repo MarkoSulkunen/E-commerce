@@ -48,6 +48,11 @@ export const signUpUser = async ({email, password}) => {
     const data = await res.json();
     return data;
   };
+
+  export const getUserById = async ({userId}) => {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/${userId}`);
+    return await res.json();
+  };
   
   export const getAllUsers = async () => {
     const res = await fetch(

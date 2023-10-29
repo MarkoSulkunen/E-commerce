@@ -34,6 +34,7 @@ export const AuthContextProvider = (props) => {
     email: email,
   };
 
+
   return (
     <AuthContext.Provider value={contextValue}>
       {props.children}

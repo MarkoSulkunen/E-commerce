@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useQuery } from 'react-query';
+import { useMutation, useQueryClient,useQuery } from 'react-query';
 import moment from 'moment';
 import 'moment-timezone';
 import DatetimePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '../styles/reservation.css';
+import { useNavigate } from 'react-router-dom';
 
+import { getUserById } from '../api/users.js';
 import { getReservations, createReservations } from '../api/reservations.js';
 import { AuthContext } from '../context/auth-context.jsx';
 
@@ -17,12 +19,29 @@ const Reservations = () => {
   const [newReservationTitle, setNewReservationTitle] = useState('');
   const [reservationHours, setReservationHours] = useState(1);
   const auth = useContext(AuthContext);
+  const { userId } = useContext(AuthContext);
 
   const { data, isLoading, isError } = useQuery('reservationData', getReservations);
 
+  const navigate = useNavigate();
+
+
+    const queryClient = useQueryClient();
+  
+    
+  const { isLoadingUser, error, userData } = useQuery(
+    ["usersData", userId],
+    () => getUserById(userId),
+    { enabled: !!userId }
+  );
+
+  console.log("isLoading:", isLoadingUser);
+  console.log("error:", error);
+  console.log("user data:", userData);
+
   useEffect(() => {
-    if (data && data.response) {
-      const reservations = data.response.map((reservation) => ({
+    if (data) {
+      const reservations = data.map((reservation) => ({
         id: reservation.id,
         title: reservation.service,
         start: new Date(reservation.date),
@@ -35,8 +54,16 @@ const Reservations = () => {
 
   const availableTimeSlots = getAvailableTimeSlots(selectedDate, events);
 
-  const handleCreateReservation = async () => {
-    if (newReservationTitle && selectedDate && selectedTime) {
+   // Creating mutation to add a product
+   const createReservationMutation = useMutation({
+    mutationFn: createReservations,
+    onSuccess: () => {
+      queryClient.invalidateQueries("reservations");
+      navigate("/reservations");
+    },
+  });
+
+  const handleCreateReservation = (event) => {
       const selectedDateTime = new Date(selectedDate);
       const timeParts = selectedTime.split(':');
       selectedDateTime.setHours(parseInt(timeParts[0], 10));
@@ -44,33 +71,16 @@ const Reservations = () => {
 
       const endReservationDate = new Date(selectedDateTime);
       endReservationDate.setHours(endReservationDate.getHours() + reservationHours);
-
-      try {
-        const response = await createReservations({
-          email: auth.email,
+      
+      console.log("email: ", userData?.email)
+      event.preventDefault();
+      createReservationMutation.mutate({
+          email: userData?.email,
           service: newReservationTitle,
           date: selectedDateTime,
           endDate: endReservationDate,
           token: auth.token,
         });
-
-        if (response && response.status === 'success') {
-          const reservation = {
-            title: newReservationTitle,
-            start: selectedDateTime,
-            end: endReservationDate,
-          };
-
-          setEvents([...events, reservation]);
-          setNewReservationTitle('');
-          setShowForm(false);
-        } else {
-          console.error('Reservation creation failed.');
-        }
-      } catch (error) {
-        console.error('API request error:', error);
-      }
-    }
   };
 
   const handleDateChange = (date) => {

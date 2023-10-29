@@ -8,7 +8,7 @@ const getReservations = async (req, res) => {
       res.send(response);
     }
     else{
-        res.json([]); 
+      res.json(response || [])
     }
     
   } catch (err) {
@@ -20,9 +20,11 @@ const getReservations = async (req, res) => {
 const getReservationById = async (req, res) => {
     try {
       const id = parseInt(req.params.id);
-      const response = await reservations.findReservationsById(id);
-      if(response.length === 1) {
+      const response = await reservations.findReservationById(id);
+      if (response && response.length === 1) {
         res.send(response[0]);
+      } else {
+        res.status(404).send("Reservation not found");
       }
     } catch (err) {
       res.status(500).send("Something went wrong");
@@ -48,7 +50,7 @@ const getReservationById = async (req, res) => {
     };
   
     try {
-      const response = await products.create(reservation);
+      const response = await reservations.create(reservation);
 
       if (response) {
         reservation.id = response.insertId;
