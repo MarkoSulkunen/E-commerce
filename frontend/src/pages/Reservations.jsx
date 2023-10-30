@@ -73,7 +73,6 @@ const Reservations = () => {
 
       const formattedDate = moment(selectedDateTime).format('YYYY-MM-DD HH:mm:ss');
       
-      console.log("email: ", userData?.email)
       event.preventDefault();
       createReservationMutation.mutate({
         email: userData?.email,

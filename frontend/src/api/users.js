@@ -50,9 +50,9 @@ export const signUpUser = async ({email, password}) => {
   };
 
   export const getUserById = async (userId) => {
-    console.log("getUserById: ", userId);
+   // console.log("getUserById: ", userId);
     const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/${userId}`);
-    console.log("userbyid response: ", res);
+   // console.log("userbyid response: ", res);
     return await res.json();
   };
   
