@@ -36,8 +36,8 @@ const Reservations = () => {
     { enabled: !!userId }
   );
 
-  console.log("userId", userId);
-  console.log("user data:", userData);
+  //console.log("userId", userId);
+  //console.log("user data:", userData);
 
   useEffect(() => {
     if (reservationData) {

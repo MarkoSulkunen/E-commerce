@@ -6,7 +6,6 @@ export const getReservations = async () => {
 };
 
 export const createReservations = async ({ email,service,date,token}) => {
-  console.log("create reservation api here")
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/api/reservations`,
     {
@@ -24,10 +23,10 @@ export const createReservations = async ({ email,service,date,token}) => {
     }
   );
   
-  console.log('API Response:', res);
+  //console.log('API Response:', res);
 
   const data = await res.json();
-  console.log('Parsed Response Data:', data);
+  //console.log('Parsed Response Data:', data);
   
   return data;
 };
