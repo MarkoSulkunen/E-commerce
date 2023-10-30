@@ -45,8 +45,8 @@ const getReservationById = async (req, res) => {
     }
     const reservation = {
       email: req.body.email,
-      price: req.body.service,
-      info: req.body.date,
+      service: req.body.service,
+      date: req.body.date,
     };
   
     try {

@@ -21,7 +21,8 @@ const Reservations = () => {
   const auth = useContext(AuthContext);
   const { userId } = useContext(AuthContext);
 
-  const { data, isLoading, isError } = useQuery('reservationData', getReservations);
+
+  const { data: reservationData, isLoading, isError } = useQuery('reservationData', getReservations);
 
   const navigate = useNavigate();
 
@@ -29,19 +30,18 @@ const Reservations = () => {
     const queryClient = useQueryClient();
   
     
-  const { isLoadingUser, error, userData } = useQuery(
+  const { data: userData } = useQuery(
     ["usersData", userId],
     () => getUserById(userId),
     { enabled: !!userId }
   );
 
-  console.log("isLoading:", isLoadingUser);
-  console.log("error:", error);
+  console.log("userId", userId);
   console.log("user data:", userData);
 
   useEffect(() => {
-    if (data) {
-      const reservations = data.map((reservation) => ({
+    if (reservationData) {
+      const reservations = reservationData.map((reservation) => ({
         id: reservation.id,
         title: reservation.service,
         start: new Date(reservation.date),
@@ -50,7 +50,7 @@ const Reservations = () => {
 
       setEvents(reservations);
     }
-  }, [data]);
+  }, [reservationData]);
 
   const availableTimeSlots = getAvailableTimeSlots(selectedDate, events);
 
@@ -70,16 +70,18 @@ const Reservations = () => {
 
       const endReservationDate = new Date(selectedDateTime);
       endReservationDate.setHours(endReservationDate.getHours() + reservationHours);
+
+      const formattedDate = moment(selectedDateTime).format('YYYY-MM-DD HH:mm:ss');
       
       console.log("email: ", userData?.email)
       event.preventDefault();
       createReservationMutation.mutate({
-          email: userData?.email,
-          service: newReservationTitle,
-          date: selectedDateTime,
-          endDate: endReservationDate,
-          token: auth.token,
-        });
+        email: userData?.email,
+        service: newReservationTitle,
+        date: formattedDate,
+        endDate: moment(endReservationDate).format('YYYY-MM-DD HH:mm:ss'),
+        token: auth.token,
+      });
   };
 
   const handleDateChange = (date) => {
