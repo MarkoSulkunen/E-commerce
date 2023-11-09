@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+:root {
+  --backgroundBrown: rgb(197, 183, 163);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
