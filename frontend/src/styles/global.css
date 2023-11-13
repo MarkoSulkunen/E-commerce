@@ -7,6 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
+
 }
 
 nav ul {
@@ -30,7 +31,7 @@ nav a {
   padding: 20px;
   box-shadow: 0 2px 4px rgba(90, 75, 9, 0.9);
   margin: 2rem;
-  background-color: rgb(167, 136, 92);
+  background-color: rgb(173, 139, 92);
   border-color: rgb(0, 0, 0);
   border-radius: 1rem;
 }
@@ -44,6 +45,13 @@ nav a {
 }
 
 .services-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

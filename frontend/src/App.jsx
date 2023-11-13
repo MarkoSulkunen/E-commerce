@@ -9,6 +9,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 import Home from "./pages/Home";
 import ContactPage from "./pages/ContactPage";
+import AboutUsPage from "./pages/AboutUs";
 import Reservations from "./pages/Reservations";
 import DayCare from "./pages/DayCare";
 import DogCare from "./pages/DogCare";
@@ -94,6 +95,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
+        <Route path="aboutus/*" element={<AboutUsPage />} />
         <Route path="reservations/*" element={<Reservations />} />
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
@@ -109,6 +111,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
+        <Route path="aboutus/*" element={<AboutUsPage />} />
         <Route path="reservations/*" element={<Reservations />} />
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />

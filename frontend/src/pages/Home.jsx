@@ -6,20 +6,17 @@ const Home = () => {
   return (
     <div id="section-hotel">
       <div className="large_container">
-        <h2>
-          Dogyy wooggy is for all kinds of dogs regardless of their breed, size,
-          age and of-course the gender.
-        </h2>{" "}
-        <h2>
-          <p></p>
-          Our dogs are on off leash in an open pack settings – under the
-          watchful eye of our highly professional staff.
-          <p></p>
-          At our hotel we have staff onsite 24/7! We offer variety of services
-          in taking care of your dog.
+      <h2>
+          WE CARE YOUR PAWS
         </h2>
-        <p></p>
+        <h2>
+        We are an online platform who helps to connect dog owners looking for dog 
+        babysitting services and people who are willing to host and take care of the dogs
+        for a short period. 
+        </h2>{" "}
+        <button to="/signup" className="UserButton">Join us</button>
       </div>
+
       <div>
         <div className="services-container">
           <div className="container">

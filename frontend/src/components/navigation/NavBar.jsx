@@ -46,16 +46,16 @@ const Navbar = () => {
           <NavLink to="/contactpage">Contact us</NavLink>
         </li>
         <li>
-          <NavLink to="/Reservations">Make a reservation</NavLink>
+          <NavLink to="/aboutus">About us</NavLink>
         </li>
         {!auth.isLoggedIn && (
         <li>
-          <NavLink to="/login" className="UserButton">Login</NavLink>
+          <NavLink to="/login" className="UserButton">Log in</NavLink>
         </li>
       )}
             {!auth.isLoggedIn && (
         <li>
-          <NavLink to="/signup" className="UserButton">Sign up</NavLink>
+          <NavLink to="/signup" className="UserButton">Join us</NavLink>
         </li>
       )}
         {auth.isLoggedIn && (

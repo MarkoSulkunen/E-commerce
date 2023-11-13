@@ -35,7 +35,7 @@ const SignUp  = (props) => {
   return (
     <div id="section-signup">
       <div className="container">
-        <h1>Sign up</h1>
+        <h1>Join us</h1>
         <form  onSubmit={onSubmitHandler}>
         <Input ref={emailRef} type="email" label="Email" />
         <Input ref={passwordRef} type="password" label="Password" />
