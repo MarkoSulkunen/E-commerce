@@ -9,7 +9,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 import Home from "./pages/Home";
 import ContactPage from "./pages/ContactPage";
-import Reservations from "./pages/Reservations";
+import AddService from "./pages/AddService";
 import DayCare from "./pages/DayCare";
 import DogCare from "./pages/DogCare";
 import Medical from "./pages/Medical";
@@ -94,7 +94,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
-        <Route path="reservations/*" element={<Reservations />} />
+        <Route path="addservice/*" element={<AddService />} />
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />
@@ -109,7 +109,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
-        <Route path="reservations/*" element={<Reservations />} />
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />

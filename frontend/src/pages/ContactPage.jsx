@@ -6,7 +6,10 @@ const ContactPage = () => {
     <div id="section-contact">
       <div  className="container">
         <h1>Contact Us</h1>
-        <p>dog.hotel@doghotel.com</p>
+        <p>Email - doggywooggy@gmail.com</p>
+        <p>Phone number - +358 004 002 00</p>
+        <p>Social Media – Facebook/Insta/Linkedin/Twitter</p>
+
       </div>
     </div>
   );

@@ -1,13 +1,21 @@
-export const getReservations = async () => {
+export const getServices = async () => {
   const res = await fetch(
-    `${import.meta.env.VITE_API_URL}/api/reservations`
+    `${import.meta.env.VITE_API_URL}/api/services`
   );
   return await res.json();
 };
 
-export const createReservations = async ({ email,service,date,token}) => {
+export const createService = async ({   service,
+  price,
+  info,
+  location,
+  name,
+  contact,
+  image,
+  token,
+  userId,}) => {
   const res = await fetch(
-    `${import.meta.env.VITE_API_URL}/api/reservations`,
+    `${import.meta.env.VITE_API_URL}/api/services`,
     {
       method: 'POST',
       headers: {
@@ -16,11 +24,18 @@ export const createReservations = async ({ email,service,date,token}) => {
         Authorization: `Bearer ${token}`
       },
       body: JSON.stringify({
-        email,
         service,
-        date
+        price,
+        info,
+        location,
+        name: name,
+        contact: contact,
+        image,
+        userId,
       })
+
     }
+
   );
   
   //console.log('API Response:', res);
@@ -31,9 +46,9 @@ export const createReservations = async ({ email,service,date,token}) => {
   return data;
 };
 
-export const deleteReservations = async ({ id,token }) => {
+export const deleteServices = async ({ id,token }) => {
   const res = await fetch(
-    `${import.meta.env.VITE_API_URL}/api/reservations/`+id,
+    `${import.meta.env.VITE_API_URL}/api/services/`+id,
     {
       method: 'DELETE',
       headers: {

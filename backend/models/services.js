@@ -1,12 +1,12 @@
 const pool = require('../db/pool');
 
-const reservations = {
+const services = {
   findAll: () => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if(err) {
         return reject(err);
       }
-      connection.query('SELECT * FROM reservations', (err, result) => {
+      connection.query('SELECT * FROM services', (err, result) => {
         connection.release();
         if(err) {
           return reject(err);
@@ -16,12 +16,12 @@ const reservations = {
     });
   }),
 
-  findReservationById: (id) => new Promise((resolve, reject) => {
+  findServicesById: (id) => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if(err) {
         return reject(err);
       }
-      connection.query('SELECT * FROM reservations WHERE id=?;', id, (err, result) => {
+      connection.query('SELECT * FROM services WHERE id=?;', id, (err, result) => {
         connection.release();
         if(err) {
           return reject(err);
@@ -31,13 +31,13 @@ const reservations = {
     });
   }),
 
-  create: (reservation) => new Promise((resolve, reject) => {
+  create: (service) => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if(err) {
         return reject(err);
       }
 
-      const query = connection.query('INSERT INTO reservations SET ?;', reservation, (err, result) => {
+      const query = connection.query('INSERT INTO services SET ?;', service, (err, result) => {
         connection.release();
         if(err) {
           reject(err);
@@ -49,7 +49,7 @@ const reservations = {
   }),
 
   deleteById: (id) => new Promise((resolve, reject) => {
-    const deleteQuery = 'DELETE FROM reservations WHERE id=?;';
+    const deleteQuery = 'DELETE FROM services WHERE id=?;';
     pool.getConnection((err, connection) => {
       if(err) {
         return reject(err);
@@ -66,4 +66,4 @@ const reservations = {
   })
 };
 
-module.exports = reservations;
+module.exports = services;
