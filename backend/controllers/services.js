@@ -84,10 +84,68 @@ const deleteServices = async (req, res) => {
     }
   };
 
+  const editService = async (req, res) => {
+    console.log("editService function called");
+    console.log(
+      "Request received at editService endpoint with params:",
+      req.params
+    );
+    console.log("Request body:", req.body);
+  
+    // Joi validation schema for the request body
+    const schema = Joi.object({
+      service: Joi.string(),
+      price: Joi.string(),
+      info: Joi.string(),
+      name: Joi.string(),
+      contact: Joi.string(),
+      location: Joi.string(),
+      image: Joi.string(),
+      userId: Joi.string(),
+    });
+  
+    // Validating request body against the Joi schema
+    const { error } = schema.validate(req.body);
+    if (error) {
+      console.log("Validation error:", error.details[0].message);
+      res.status(400).send(error.details[0].message);
+      return;
+    }
+  
+    const id = parseInt(req.params.id);
+    const serviceData = {
+      service: req.body.service,
+      price: String(req.body.price),
+      info: req.body.info,
+      name: req.body.name,
+      contact: req.body.contact,
+      location: req.body.contact,
+      image: req.body.image,
+      userId: req.body.userId,
+    };
+  
+    try {
+      // Updates the service in the database
+      const result = await services.updateById(id, serviceData);
+      if (result.affectedRows === 0) {
+        console.log("Service not found");
+        res.status(404).send("Service not found");
+        return;
+      }
+      console.log("Service updated");
+      res.status(200).send("Service updated");
+    } catch (err) {
+      console.log("Error:", err);
+      res.status(500).send("Something went wrong");
+    }
+  };
+  
+
 module.exports = {
 
     getServices,
     getServicesById,
     createServices,
-    deleteServices
+    deleteServices,
+    editService
   };

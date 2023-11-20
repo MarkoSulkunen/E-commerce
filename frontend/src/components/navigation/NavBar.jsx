@@ -50,6 +50,11 @@ const Navbar = () => {
         </li>
         {auth.isLoggedIn && (
          <li>
+          <NavLink to="/myservices">My Services</NavLink>
+        </li>
+        )}
+        {auth.isLoggedIn && (
+         <li>
           <NavLink to="/addservice">Add Service</NavLink>
         </li>
         )}

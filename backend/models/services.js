@@ -63,7 +63,39 @@ const services = {
         resolve(result);
       });
     });
-  })
+  }),
+
+updateById: (id, service) =>
+new Promise((resolve, reject) => {
+  console.log(
+    "updateById function called with id:",
+    id,
+    "and data:",
+    product
+  );
+  pool.getConnection((err, connection) => {
+    if (err) {
+      return reject(err);
+    }
+
+    const updateQuery =
+      "UPDATE services SET service=?, price=?, info=?, image=? WHERE id=?;";
+    const values = [
+      service.service,
+      service.price,
+      service.info,
+      service.image,
+      id,
+    ];
+    connection.query(updateQuery, values, (err, result) => {
+      connection.release();
+      if (err) {
+        return reject(err);
+      }
+      resolve(result);
+    });
+  });
+}),
 };
 
 module.exports = services;

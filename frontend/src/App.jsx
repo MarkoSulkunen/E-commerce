@@ -20,6 +20,7 @@ import Spa from "./pages/Spa";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import MainNavigation from "./components/navigation/MainNavigation";
+import MyServices from "./pages/MyServices";
 
 import { AuthContext } from "./context/auth-context";
 
@@ -96,6 +97,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
         <Route path="aboutus/*" element={<AboutUsPage />} />
+        <Route path="myservices/*" element={<MyServices />} />
         <Route path="addservice/*" element={<AddService />} />
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
