@@ -7,7 +7,7 @@ const DogCare = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="large_container">
         <h1>Dog Care Services</h1>
         <p></p>
         <div>

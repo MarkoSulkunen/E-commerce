@@ -14,7 +14,7 @@ const Home = () => {
         babysitting services and people who are willing to host and take care of the dogs
         for a short period. 
         </h2>{" "}
-        <button to="/signup" className="UserButton">Join us</button>
+        <button to="/signup" className="JoinButton">Join us</button>
       </div>
 
       <div>

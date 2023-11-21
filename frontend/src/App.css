@@ -7,6 +7,11 @@
 
 :root {
   --backgroundBrown: rgb(197, 183, 163);
+  --DWDarkBrown: #823c00;
+  --DWGreen: #83ab5a;
+  --DWCyan: #78d0c0;
+  --DWLight: #fadcb9;
+  --DWOrange: #ff9600;
 }
 
 .logo {

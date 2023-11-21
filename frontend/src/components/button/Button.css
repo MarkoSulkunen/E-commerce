@@ -20,3 +20,15 @@
     background: #373737;
     border-color: #070707;
   }
+
+  .button{
+    color:whitesmoke !important;
+    font-size: 1rem !important;
+    width: 10rem !important;
+    margin-top: 2rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    background-color: rgb(233, 147, 27);
+    border-color: rgb(35, 35, 56);
+    border-radius: 1rem;
+  }

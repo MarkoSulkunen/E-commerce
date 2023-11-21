@@ -7,7 +7,7 @@ const Medical = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="large_container">
         <h1>Medical Care</h1>
         <p></p>
         <div>

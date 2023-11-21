@@ -7,7 +7,7 @@ const Therapy = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="large_container">
         <h1>Dog mental therapy</h1>
         <p></p>
         <div>

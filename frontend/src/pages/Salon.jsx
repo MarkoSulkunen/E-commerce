@@ -7,7 +7,7 @@ const Salon = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="large_container">
         <h1>Salon services</h1>
         <p></p>
         <div>

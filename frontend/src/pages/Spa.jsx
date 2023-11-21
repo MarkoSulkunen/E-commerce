@@ -7,7 +7,7 @@ const Spa = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="large_container">
         <h1>Spa & Wellness</h1>
         <p></p>
         <div>
