@@ -34,10 +34,7 @@ nav a {
   background-color: rgb(173, 139, 92);
   border-color: rgb(0, 0, 0);
   border-radius: 1rem;
-<<<<<<< HEAD
-=======
   animation: 1s ease-out 0s 1 slideIn;
->>>>>>> services
 }
 
 .large_container {
@@ -46,10 +43,7 @@ nav a {
   background-color: rgb(167, 136, 92);
   border-color: rgb(0, 0, 0);
   border-radius: 1rem;
-<<<<<<< HEAD
-=======
   animation: 1s ease-out 0s 1 fadeIn;
->>>>>>> services
 }
 
 .services-container {
@@ -57,16 +51,6 @@ nav a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-<<<<<<< HEAD
-}
-
-.about-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-=======
->>>>>>> services
 }
 
 h1 {
@@ -79,15 +63,12 @@ h2 {
   margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
-=======
 h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
   font-weight: 800;
 }
 
->>>>>>> services
 p {
   font-size: 1.2rem;
   line-height: 1.5;

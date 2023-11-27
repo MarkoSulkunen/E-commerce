@@ -13,12 +13,6 @@ const ContactPage = () => {
     <div id="section-contact">
       <div className="container">
         <h1>Contact Us</h1>
-<<<<<<< HEAD
-        <p>Email - doggywooggy@gmail.com</p>
-        <p>Phone number - +358 004 002 00</p>
-        <p>Social Media – Facebook/Insta/Linkedin/Twitter</p>
-
-=======
         <div className="contact-small-container">
           {emailSymbol}
           <p>doggywooggy@gmail.com</p>
@@ -34,7 +28,6 @@ const ContactPage = () => {
           <a className="social-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">{linkedinLogo}</a>
           <a className="social-link" href="https://www.twitter.com/" target="_blank" rel="noreferrer">{twitterLogo}</a>
         </div>
->>>>>>> services
       </div>
     </div>
   );

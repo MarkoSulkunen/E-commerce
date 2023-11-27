@@ -1,10 +1,7 @@
 import React from "react";
 import "../styles/global.css";
 import { dogImage, dogBoneImage, dogPawImage, brushImage, spaImage, heartPlusImage } from "../assets/symbols/common";
-<<<<<<< HEAD
-=======
 import Services from "../components/services/Services";
->>>>>>> services
 
 const Home = () => {
   return (
@@ -20,11 +17,7 @@ const Home = () => {
         </h2>{" "}
         <button to="/signup" className="UserButton">Join us</button>
       </div>
-<<<<<<< HEAD
-
-=======
       <Services></Services>
->>>>>>> services
       <div>
         <div className="services-container">
           <div className="container">

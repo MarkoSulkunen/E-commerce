@@ -38,19 +38,4 @@
   .main-navigation__header-nav {
     display: block;
   }
-<<<<<<< HEAD
-
-  /* Hide menu button and show header navigation if the screen size is 768px or greater */
-  @media (min-width: 768px) {
-    .main-navigation__menu-btn {
-      display: none;
-    }
-    .main-navigation__header-nav {
-      display: block;
-    }
-  }
-
-
-=======
 }
->>>>>>> services
