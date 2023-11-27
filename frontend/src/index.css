@@ -5,12 +5,13 @@
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  
 }
 
 body {
   margin: 0;
-  background: rgb(210, 201, 189);
+  background: var(--backgroundBrown);
+  font-family: sans-serif;
 }
 
 .center {
@@ -34,7 +35,6 @@ h1 {
 }
 
 button {
-
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -43,6 +43,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #0c0c0c;
 }

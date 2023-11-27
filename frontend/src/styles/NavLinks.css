@@ -43,3 +43,16 @@
   border-color: rgb(35, 35, 56);
   border-radius: 1rem;
 }
+
+.JoinButton{
+  margin-top: 1.5rem;
+  color:whitesmoke !important;
+  font-size: 1.2rem !important;
+  font-weight: 900 !important;
+  width: 10rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  background-color: rgb(233, 147, 27);
+  border-color: rgb(35, 35, 56);
+  border-radius: 1rem;
+}
