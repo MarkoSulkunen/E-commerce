@@ -97,12 +97,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
         <Route path="aboutus/*" element={<AboutUsPage />} />
-<<<<<<< HEAD
-        <Route path="reservations/*" element={<Reservations />} />
-=======
         <Route path="myservices/*" element={<MyServices />} />
         <Route path="addservice/*" element={<AddService />} />
->>>>>>> services
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />
@@ -118,10 +114,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
         <Route path="aboutus/*" element={<AboutUsPage />} />
-<<<<<<< HEAD
-        <Route path="reservations/*" element={<Reservations />} />
-=======
->>>>>>> services
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />
