@@ -40,6 +40,7 @@ const AddService = () => {
   console.log("error:", error);
   console.log("user data:", data);
 
+  // Creating mutation to add a service to the database
   const createServiceMutation = useMutation({
     mutationFn: createService,
     onSuccess: () => {
@@ -48,6 +49,19 @@ const AddService = () => {
     },
   });
 
+  /*###############################################################################
+
+   FUNCTION DESCRIPTION
+
+  -----------------------------------------------------------------------------------
+
+   NAME: serviceSubmitHandler
+
+   DESCRIPTION: Gets input values from refs and sends a mutation to the server
+                to add service to the database.
+                Called when user submits form to add a new service.
+
+  ##################################################################################*/
   const serviceSubmitHandler = (event) => {
     event.preventDefault();
     createServiceMutation.mutate({

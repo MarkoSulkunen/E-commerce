@@ -1,3 +1,15 @@
+
+/*###############################################################################
+
+ FUNCTION DESCRIPTION
+
+-----------------------------------------------------------------------------------
+
+ NAME: getServices
+
+ DESCRIPTION: Makes API call to fetch all services from the server.
+
+##################################################################################*/
 export const getServices = async () => {
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/api/services`
@@ -5,6 +17,17 @@ export const getServices = async () => {
   return await res.json();
 };
 
+/*###############################################################################
+
+ FUNCTION DESCRIPTION
+
+-----------------------------------------------------------------------------------
+
+ NAME: getServicesById
+
+ DESCRIPTION: Makes API call to fetch services by user id
+
+##################################################################################*/
 export const getServicesById = async (userId, token) => {
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/api/services?userId=${userId}`,
@@ -17,6 +40,17 @@ export const getServicesById = async (userId, token) => {
   return await res.json();
 };
 
+/*###############################################################################
+
+ FUNCTION DESCRIPTION
+
+-----------------------------------------------------------------------------------
+
+ NAME: createService
+
+ DESCRIPTION: Makes API call to crerate a new service
+
+##################################################################################*/
 export const createService = async ({   service,
   price,
   info,
@@ -58,6 +92,17 @@ export const createService = async ({   service,
   return data;
 };
 
+/*###############################################################################
+
+ FUNCTION DESCRIPTION
+
+-----------------------------------------------------------------------------------
+
+ NAME: deleteServices
+
+ DESCRIPTION: Makes API call to delete a service
+
+##################################################################################*/
 export const deleteServices = async ({ id,token }) => {
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/api/services/`+id,
@@ -71,6 +116,17 @@ export const deleteServices = async ({ id,token }) => {
   return await res.json();
 };
 
+/*###############################################################################
+
+ FUNCTION DESCRIPTION
+
+-----------------------------------------------------------------------------------
+
+ NAME: editService
+
+ DESCRIPTION: Makes API call to edit a service
+
+##################################################################################*/
 export const editService = async ({ id, token, editedService }) => {
   console.log("Request sent to editService endpoint with params:", { id });
   console.log("Request body:", editedService);
