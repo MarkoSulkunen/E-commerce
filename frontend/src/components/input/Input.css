@@ -1,38 +1,37 @@
-.form-control {
-    margin: 1rem 0;
-  }
-  
-  .form-control label,
-  .form-control input {
-    display: block;
-  }
-  
-  .form-control label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-  
-  .form-control input {
-    width: 100%;
-    font: inherit;
-    border: 1px solid #ccc;
-    background: #f8f8f8;
-    padding: 0.15rem 0.25rem;
-  }
-  
-  .form-control input:focus {
-    outline: none;
-    background: #ebebeb;
-    border-color: #510077;
-  }
-  
-  .form-control--invalid label,
-  .form-control--invalid p {
-    color: red;
-  }
-  
-  .form-control--invalid input {
-    border-color: red;
-    background: #ffd1d1;
-  }
+.input-group {
+  font-size: 1.25rem;
+  position: relative;
+  --primary: #ffffff;
+}
+
+.input {
+  all: unset;
+  color: #fefefe;
+  padding: 1rem;
+  width: 25rem;
+  border: 1px solid rgb(113, 71, 14);
+  border-radius: 10px;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 2rem;
+}
+
+.label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #d4d4d4;
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 2rem;
+}
+
+.input:focus {
+  border: 1px solid var(--primary);
+}
+
+.input:is(:focus, :valid) ~ label {
+  transform: translateY(-120%) scale(0.7);
+  background-color: rgb(173, 139, 92);
+  padding-inline: 0.3rem;
+  color: var(--primary);
+}

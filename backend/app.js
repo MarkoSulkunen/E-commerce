@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const users = require('./routes/users');
-const reservations = require('./routes/reservations');
+const services = require('./routes/services');
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(cors());
 
 
 app.use('/api/users', users);
-app.use('/api/reservations', reservations);
+app.use('/api/services', services);
 
 
 app.get('/health', (req, res) => {

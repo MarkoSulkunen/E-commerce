@@ -1,0 +1,20 @@
+describe('App', () => {
+  beforeEach(() => {
+    cy.visit('http://127.0.0.1:5173/')
+  })
+  it('adds new service', () => {
+    cy.get('nav a').contains('Login').click()
+    cy.get('input[type="email"]').type('testuser@mail.com')
+    cy.get('input[type="password"]').type('123456')
+    cy.get('button[type="submit"]').click()
+    cy.get('nav a').contains('Add Service').click()
+    cy.get('#service-name').type('Test Service')
+    cy.get('#service-price').type('10')
+    cy.get('#service-info').type('Info')
+    cy.get('#service-location').type('Tampere')
+    cy.get('button[type="submit"]').click()
+    cy.url().should('include', 'http://127.0.0.1:5173/')
+    cy.get('nav a').contains('Home').click()
+    cy.contains('Test Product').should('exist')
+  })
+})

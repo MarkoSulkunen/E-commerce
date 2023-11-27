@@ -1,0 +1,21 @@
+.service-list {
+    list-style: none;
+    margin: 2rem auto;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .service-list li {
+    flex-basis: calc(50% - 1rem);
+    margin: 0.5rem;
+    vertical-align: top;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .service-list li {
+      flex-basis: 100%;
+    }
+  }

@@ -10,7 +10,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Home from "./pages/Home";
 import ContactPage from "./pages/ContactPage";
 import AboutUsPage from "./pages/AboutUs";
-import Reservations from "./pages/Reservations";
+import AddService from "./pages/AddService";
 import DayCare from "./pages/DayCare";
 import DogCare from "./pages/DogCare";
 import Medical from "./pages/Medical";
@@ -20,6 +20,7 @@ import Spa from "./pages/Spa";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import MainNavigation from "./components/navigation/MainNavigation";
+import MyServices from "./pages/MyServices";
 
 import { AuthContext } from "./context/auth-context";
 
@@ -96,7 +97,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
         <Route path="aboutus/*" element={<AboutUsPage />} />
+<<<<<<< HEAD
         <Route path="reservations/*" element={<Reservations />} />
+=======
+        <Route path="myservices/*" element={<MyServices />} />
+        <Route path="addservice/*" element={<AddService />} />
+>>>>>>> services
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />
@@ -112,7 +118,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
         <Route path="aboutus/*" element={<AboutUsPage />} />
+<<<<<<< HEAD
         <Route path="reservations/*" element={<Reservations />} />
+=======
+>>>>>>> services
         <Route path="daycare/*" element={<DayCare />} />
         <Route path="dogcare/*" element={<DogCare />} />
         <Route path="medical/*" element={<Medical />} />
