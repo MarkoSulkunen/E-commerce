@@ -62,7 +62,6 @@ const Navbar = () => {
         <li>
           <NavLink to="/login">Login</NavLink>
         </li>
-        
       )}
             {!auth.isLoggedIn && (
         <li>
