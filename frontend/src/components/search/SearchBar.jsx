@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [locationQuery, setLocationQuery] = useState("");
 
   const handleSearch = () => {
-    console.log("search:", searchQuery);
-    onSearch(searchQuery);
+    console.log("search:", searchQuery, "location:", locationQuery);
+    onSearch(searchQuery, locationQuery);
   };
 
   return (
@@ -15,6 +16,12 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Search services..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Search by location..."
+        value={locationQuery}
+        onChange={(e) => setLocationQuery(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
     </div>

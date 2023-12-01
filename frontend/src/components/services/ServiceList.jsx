@@ -18,17 +18,25 @@ const ServiceList = ({ items }) => {
 
   // State for search query
   const [searchQuery, setSearchQuery] = React.useState("");
+  const [locationQuery, setLocationQuery] = React.useState("");
 
-  // Filtered service list based on search query
+  // Filtered service list based on search query and location
   const filteredServiceList = serviceList
-  ? serviceList.filter((service) =>
-      service.name && service.name.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  : [];
+    ? serviceList.filter((service) => {
+        const serviceMatchesQuery =
+          service.service &&
+          service.service.toLowerCase().includes(searchQuery.toLowerCase());
+        const locationMatchesQuery =
+          service.location &&
+          service.location.toLowerCase().includes(locationQuery.toLowerCase());
+        return serviceMatchesQuery && locationMatchesQuery;
+      })
+    : [];
 
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
+    const handleSearch = (query, location) => {
+      setSearchQuery(query);
+      setLocationQuery(location);
+    };
 
   return (
     <>
