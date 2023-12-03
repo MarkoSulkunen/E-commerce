@@ -7,7 +7,7 @@ const Spa = () => {
 
   return (
     <div>
-        <h1>Spa & Wellness</h1>
+        <h1 className="pageTitle">Spa & Wellness</h1>
         <p></p>
         <div>
         <Services></Services>

@@ -11,7 +11,7 @@ import { emailSymbol, phoneSymbol } from "../assets/symbols/common";
 const ContactPage = () => {
   return (
     <div id="section-contact">
-      <div className="container">
+      <div className="contact-container">
         <h1>Contact Us</h1>
         <div className="contact-small-container">
           {emailSymbol}

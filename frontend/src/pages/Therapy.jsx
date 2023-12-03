@@ -7,7 +7,7 @@ const Therapy = () => {
 
   return (
     <div>
-        <h1>Dog mental therapy</h1>
+        <h1 className="pageTitle">Dog mental therapy</h1>
         <p></p>
         <div>
         <Services></Services>

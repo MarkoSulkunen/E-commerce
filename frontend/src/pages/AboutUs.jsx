@@ -11,24 +11,16 @@ import { Link } from "react-router-dom";
 const AboutUsPage = () => {
   return (
     <div>
-      <div className="large_container">
-        <h2>ABOUT US</h2>
-        <h2>
-          We are an online platform that helps connect dog owners looking for
-          babysitting services with people willing to host and care for dogs for
-          a short period.
-        </h2>
-      </div>
-      <div className="about-container">
-        <div className="container">
+      <h1 className="meetTeam">Meet our team</h1>
+      <div className="all-people-container">
+        <div className="about-container">
           <img className="about-pic" src={CEO} alt="CEO" />
           <div className="info-container">
             <h3>Chandima Suriyachcharige</h3>
             <p>CEO</p>
           </div>
         </div>
-
-        <div className="container">
+        <div className="about-container">
           <img
             className="about-pic"
             src={marketingmanager}
@@ -40,7 +32,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        <div className="container">
+        <div className="about-container">
           <img
             className="about-pic"
             src={financemanager}
@@ -52,7 +44,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        <div className="container">
+        <div className="about-container">
           <img
             className="about-pic"
             src={operationmanager}
@@ -63,7 +55,8 @@ const AboutUsPage = () => {
             <p>Operation Manager</p>
           </div>
         </div>
-        <div className="container">
+
+        <div className="about-container">
           <img
             className="about-pic"
             src={servicemanager}
@@ -74,6 +67,15 @@ const AboutUsPage = () => {
             <p>Service manager</p>
           </div>
         </div>
+      </div>
+      <div className="about_info_container">
+        <h2>
+          We are an online platform that helps connect dog owners looking for
+          babysitting services with people willing to host and care for dogs for
+          a short period. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+        </h2>
+        <br/>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
       </div>
     </div>
   );

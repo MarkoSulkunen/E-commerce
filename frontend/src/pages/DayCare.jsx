@@ -7,7 +7,7 @@ const DayCare = () => {
 
   return (
     <div>
-        <h1>Dog Babysitting</h1>
+        <h1 className="pageTitle">Dog Babysitting</h1>
         <p></p>
         <div>
         <Services></Services>

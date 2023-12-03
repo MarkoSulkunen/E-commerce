@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.home_banner_container {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 100%;
+  height: 50rem;
+  padding-top: 3rem;
+  background-color: #f3cbbf;
+  border-bottom: 0.5rem solid whitesmoke;
+}
+
+.home_banner_small_container {
+  text-align: left;
+  width: auto;
+  background-color: #f3cbbf;
+  max-width: 25rem;
+  min-width: 25rem;
+}
+
+.home_banner_small_container h1 {
+  padding-left: 1rem;
+  padding-top: 2rem;
+  font-family: 'Bebas Neue';
+  font-size: 3rem;
+  color: white;
+}
+
+.home_banner_small_container hr {
+    color: whitesmoke;
+    background-color: whitesmoke;
+    border-width:0;
+    height: 0.3rem;
+  }
+
+.home_banner_small_container h3 {
+  padding-left: 1rem;
+  padding-top: 2rem;
+  font-weight: 900;
+  font-family: 'Bebas Neue';
+  font-size: 4.5rem;
+  color: #003295;
+}
+
+.home_banner_center_container {
+  position: relative;
+  text-align: left;
+  width: auto;
+  background-color: #f3cbbf;
+  max-width: 100rem;
+  min-width: 25rem;
+}
+
+.home_banner_small_container h4 {
+  padding-left: 2rem;
+  padding-top: 2.3rem;
+  padding-bottom: 1rem;
+  font-size: 5rem;
+  font-family: 'Bebas Neue';
+  color: #03035d;
+}
+
+.home_banner_center_container h1 {
+  position: absolute;
+  top: 6%;
+  left: 2%;
+  font-size: 5rem;
+  font-family: 'Bebas Neue';
+  color: white;
+}
+
+.home_banner_center_container hr {
+  position: absolute;
+  top: 21.15%;
+  left: 0%;
+  width: 30rem;
+  height: 0.2rem;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  border-width:0;
+}
+
+.home_banner_center_container .leftHr {
+    position: absolute;
+    top: 30rem;
+    left: auto;
+    right: 0;
+    width: 30rem;
+    height: 0.2rem;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    border-width:0;
+  }
+
+.circle {
+    position: absolute;
+    top: 20%;
+    left: 29rem;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .leftCircle {
+    position: absolute;
+    top: 29.5rem;
+    left: auto;
+    right: 29rem;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.home_banner_center_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home_banner_small_text {
+  background-color: #fae6df;
+  color: rgb(74, 74, 74);
+  font-family: Verdana;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 600;
+  text-align: justify;
+  line-height: 2rem;
+  letter-spacing: 0rem;
+  padding: 2rem;
+  padding-top: 6rem;
+  width: 100%;
+  height: 25rem;
+}
+
+.home_banner_small_container button {
+    margin-top: 5rem;
+    margin-left: 2rem !important;
+    width: 19rem !important;
+    font-size: 1.4rem !important;
+    background-color: #330099;
+  }
+
+  .home_banner_small_container button:hover {
+    background-color: #501fb1 !important;
+  }
+
+  .home_banner_small_container button img {
+    width: 1.5rem;
+    margin-left: 1rem;
+  }

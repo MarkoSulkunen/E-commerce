@@ -8,7 +8,7 @@ const Medical = () => {
   return (
     <div>
 
-        <h1>Medical Care</h1>
+        <h1 className="pageTitle">Medical Care</h1>
         <p></p>
         <div>
         <Services></Services>

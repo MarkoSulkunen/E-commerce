@@ -33,7 +33,7 @@ const LogIn = (props) => {
 
   return (
     <div id="section-login">
-      <div className="container">
+      <div className="contact-container">
       <h1>Login</h1>
       <form  onSubmit={onSubmitHandler}>
         <Input ref={emailRef} type="email" label="Email" />

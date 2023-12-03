@@ -8,7 +8,7 @@ const Salon = () => {
   return (
     <div>
 
-        <h1>Salon services</h1>
+        <h1 className="pageTitle">Salon services</h1>
         <p></p>
         <div>
         <Services></Services>

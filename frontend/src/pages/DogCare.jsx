@@ -7,7 +7,7 @@ const DogCare = () => {
 
   return (
     <div>
-        <h1>Dog Care Services</h1>
+        <h1 className="pageTitle">Dog Care Services</h1>
         <p></p>
         <div>
         <Services></Services>
