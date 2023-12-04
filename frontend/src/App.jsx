@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import ContactPage from "./pages/ContactPage";
 import AboutUsPage from "./pages/AboutUs";
 import AddService from "./pages/AddService";
+import ServicesPage from "./pages/ServicesPage";
 import DayCare from "./pages/DayCare";
 import DogCare from "./pages/DogCare";
 import Medical from "./pages/Medical";
@@ -105,6 +106,7 @@ function App() {
         <Route path="salon/*" element={<Salon />} />
         <Route path="therapy/*" element={<Therapy />} />
         <Route path="spa/*" element={<Spa />} />
+        <Route path="servicespage/*" element={<ServicesPage />} />
         <Route path="/" element={<Navigate replace to="/" />} />
       </Routes>
     );
@@ -120,6 +122,7 @@ function App() {
         <Route path="salon/*" element={<Salon />} />
         <Route path="therapy/*" element={<Therapy />} />
         <Route path="spa/*" element={<Spa />} />
+        <Route path="servicespage/*" element={<ServicesPage />} />
         <Route path="login/*" element={<LogIn />} />
         <Route path="signup/*" element={<SignUp />} />
         <Route path="/" element={<Navigate replace to="/" />} />
