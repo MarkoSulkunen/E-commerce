@@ -14,7 +14,6 @@ const ServicesPage = () => {
             <Button>Find dog walker</Button>
             <Button>Find dog groomer</Button>
             <Button>Find dog boarder</Button>
-        <Services></Services>
       </div>
       </div>
 
