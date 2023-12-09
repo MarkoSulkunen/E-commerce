@@ -13,6 +13,7 @@ const SignUp  = (props) => {
   const emailRef = useRef();
   const passwordRef = useRef();
 
+  /* Sign up mutation */
   const signUpUserMutation = useMutation({
     mutationFn: signUpUser,
     onSuccess: (data) => {
@@ -23,6 +24,13 @@ const SignUp  = (props) => {
     },
   });
 
+  /*###############################################################################
+
+   FUNCTION NAME: onSubmitHandler
+
+   DESCRIPTION: Gets input values from refs and sends a mutation to the server
+
+  ################################################################################*/
   const onSubmitHandler = (event) => {
     event.preventDefault();
 

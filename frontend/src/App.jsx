@@ -12,12 +12,6 @@ import ContactPage from "./pages/ContactPage";
 import AboutUsPage from "./pages/AboutUs";
 import AddService from "./pages/AddService";
 import ServicesPage from "./pages/ServicesPage";
-import DayCare from "./pages/DayCare";
-import DogCare from "./pages/DogCare";
-import Medical from "./pages/Medical";
-import Salon from "./pages/Salon";
-import Therapy from "./pages/Therapy";
-import Spa from "./pages/Spa";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import MainNavigation from "./components/navigation/MainNavigation";
@@ -37,6 +31,7 @@ function App() {
   const [email, setEmail] = useState(null);
   const [tokenExpirationDate, setTokenExpirationDate] = useState(null);
 
+  /* useCallback to login user */
   const login = useCallback((uid, token, email, expirationDate) => {
     setToken(token);
     setuser(uid);
@@ -55,6 +50,7 @@ function App() {
     );
   }, []);
 
+  /* useCallback to logout user */
   const logout = useCallback(() => {
     setToken(null);
     setuser(null);
@@ -100,12 +96,6 @@ function App() {
         <Route path="aboutus/*" element={<AboutUsPage />} />
         <Route path="myservices/*" element={<MyServices />} />
         <Route path="addservice/*" element={<AddService />} />
-        <Route path="daycare/*" element={<DayCare />} />
-        <Route path="dogcare/*" element={<DogCare />} />
-        <Route path="medical/*" element={<Medical />} />
-        <Route path="salon/*" element={<Salon />} />
-        <Route path="therapy/*" element={<Therapy />} />
-        <Route path="spa/*" element={<Spa />} />
         <Route path="servicespage/*" element={<ServicesPage />} />
         <Route path="/" element={<Navigate replace to="/" />} />
       </Routes>
@@ -116,12 +106,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="contactpage/*" element={<ContactPage />} />
         <Route path="aboutus/*" element={<AboutUsPage />} />
-        <Route path="daycare/*" element={<DayCare />} />
-        <Route path="dogcare/*" element={<DogCare />} />
-        <Route path="medical/*" element={<Medical />} />
-        <Route path="salon/*" element={<Salon />} />
-        <Route path="therapy/*" element={<Therapy />} />
-        <Route path="spa/*" element={<Spa />} />
         <Route path="servicespage/*" element={<ServicesPage />} />
         <Route path="login/*" element={<LogIn />} />
         <Route path="signup/*" element={<SignUp />} />

@@ -42,15 +42,11 @@ const ServiceItem = (props) => {
 
   /*###############################################################################
 
-   FUNCTION DESCRIPTION
-
-  -----------------------------------------------------------------------------------
-
-   NAME: onEditChangeHandler
+   FUNCTION NAME: onEditChangeHandler
 
    DESCRIPTION: Sets the editedService state variable to the input values.
 
-  ##################################################################################*/
+  ################################################################################*/
   const onEditChangeHandler = (event) => {
     setEditedService({
       ...editedService,
@@ -97,15 +93,11 @@ const ServiceItem = (props) => {
 
   /*###############################################################################
 
-   FUNCTION DESCRIPTION
-
-  -----------------------------------------------------------------------------------
-
-   NAME: deleteConfirmedHandler
+   FUNCTION NAME: deleteConfirmedHandler
 
    DESCRIPTION: Sends a mutation to the server to delete a service from the database.
 
-  ##################################################################################*/
+  ################################################################################*/
   const deleteConfirmedHandler = () => {
     setShowConfirmationModal(false);
     deleteServiceMutation.mutate(
@@ -121,15 +113,11 @@ const ServiceItem = (props) => {
 
   /*###############################################################################
 
-   FUNCTION DESCRIPTION
-
-  -----------------------------------------------------------------------------------
-
-   NAME: editConfirmedHandler
+   FUNCTION NAME: editConfirmedHandler
 
    DESCRIPTION: Sends a mutation to the server to edit a service in the database.
 
-  ##################################################################################*/
+  ################################################################################*/
   const editConfirmedHandler = () => {
     console.log("editConfirmedHandler called");
     setShowEditModal(false);

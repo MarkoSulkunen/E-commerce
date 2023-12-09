@@ -6,8 +6,6 @@ import marketingmanager from "../assets/images/marketingmanager.png";
 import operationmanager from "../assets/images/operationmanager.png";
 import servicemanager from "../assets/images/servicemanager.png";
 
-import { Link } from "react-router-dom";
-
 const AboutUsPage = () => {
   return (
     <div>

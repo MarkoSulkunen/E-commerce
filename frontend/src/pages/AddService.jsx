@@ -51,17 +51,13 @@ const AddService = () => {
 
   /*###############################################################################
 
-   FUNCTION DESCRIPTION
-
-  -----------------------------------------------------------------------------------
-
-   NAME: serviceSubmitHandler
+   FUNCTION NAME: serviceSubmitHandler
 
    DESCRIPTION: Gets input values from refs and sends a mutation to the server
                 to add service to the database.
                 Called when user submits form to add a new service.
 
-  ##################################################################################*/
+  ################################################################################*/
   const serviceSubmitHandler = (event) => {
     event.preventDefault();
     createServiceMutation.mutate({

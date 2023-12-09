@@ -49,49 +49,37 @@ const Home = () => {
             {dogImage}
             <h2>Dog Babysitting</h2>
             <p></p>
-            <p>
-              
-            </p>
+            <p></p>
           </div>
           <div className="container">
             {dogPawImage}
             <h2>Dog Walking Services </h2>
             <p></p>
-            <p>
-              
-            </p>
+            <p></p>
           </div>
           <div className="container">
             {dogBoneImage}
             <h2>Dog Boarding Services </h2>
             <p></p>
-            <p>
-              
-            </p>
+            <p></p>
           </div>
           <div className="container">
             {heartPlusImage}
             <h2>Medical Care </h2>
             <p></p>
-            <p>
-             
-            </p>
+            <p></p>
           </div>
           <div className="container">
             {spaImage}
             <h2>Spa & Wellness </h2>
             <p></p>
-            <p>
-              
-            </p>
+            <p></p>
           </div>
           <div className="container">
             {brushImage}
             <h2>Dog Grooming Services</h2>
             <p></p>
-            <p>
-             
-            </p>
+            <p></p>
           </div>
         </div>
       </div>
