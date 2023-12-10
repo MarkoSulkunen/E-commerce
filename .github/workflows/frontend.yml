@@ -27,13 +27,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Start Application
-        working-directory: ./frontend
-        run: npm run dev
-
-      - name: Wait for Application to Start
-        run: sleep 10
-
         # Install NPM dependencies, cache them correctly
         # and run all Cypress tests
       - name: Cypress run
