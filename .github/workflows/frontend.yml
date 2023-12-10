@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Start Application
-        working-directory: frontend
+        working-directory: ./frontend
         run: npm run dev
 
       - name: Wait for Application to Start
@@ -39,7 +39,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          working-directory: frontend
+          working-directory: ./frontend
           start: npm start
           wait-on: 'http://127.0.0.1:5173'
 
