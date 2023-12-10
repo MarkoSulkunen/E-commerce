@@ -32,6 +32,7 @@ jobs:
 
       # Install Cypress and its dependencies
       - name: Install Cypress
+        working-directory: frontend
         run: npm install cypress
 
       # Run Cypress tests
