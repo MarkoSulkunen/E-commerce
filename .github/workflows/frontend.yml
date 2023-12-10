@@ -24,6 +24,21 @@ jobs:
           echo "MYSQL_USERNAME: ${{ env.MYSQL_USERNAME}}"
           echo "MYSQL_PASSWORD: ${{ env.MYSQL_PASSWORD}}"
 
+      # Install Node.js
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      # Install Cypress and its dependencies
+      - name: Install Cypress
+        run: npm install cypress
+
+      # Run Cypress tests
+      - name: Run Cypress tests
+        working-directory: ./frontend
+        run: npm run test:e2e
+
   # Name of the job
   build:
     # The runner to use
