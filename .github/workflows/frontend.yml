@@ -24,6 +24,10 @@ jobs:
           echo "MYSQL_USERNAME: ${{ env.MYSQL_USERNAME}}"
           echo "MYSQL_PASSWORD: ${{ env.MYSQL_PASSWORD}}"
 
+      # Step to fetch the code from the repo
+      - name: Fetch code
+        uses: actions/checkout@v2
+        
       # Install Node.js
       - name: Install Node.js
         uses: actions/setup-node@v3
