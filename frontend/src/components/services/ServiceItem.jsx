@@ -61,7 +61,7 @@ const ServiceItem = (props) => {
       console.log("editServiceMutation success");
       queryClient.invalidateQueries("services");
       setShowEditModal(false);
-      window.location.reload();
+      //window.location.reload();
     },
     onError: (error) => {
       console.log(error);
@@ -71,7 +71,7 @@ const ServiceItem = (props) => {
       console.log(error.request);
       console.log(error.config);
       queryClient.invalidateQueries("services");
-      window.location.reload();
+     // window.location.reload();
     },
   });
 
@@ -81,13 +81,13 @@ const ServiceItem = (props) => {
       console.log(data);
       console.log("success");
       queryClient.invalidateQueries("services");
-      window.location.reload();
+      //window.location.reload();
     },
     onError: (error) => {
       console.log(error.message);
       console.log("error");
       queryClient.invalidateQueries("services");
-      window.location.reload();
+      //window.location.reload();
     },
   });
 
