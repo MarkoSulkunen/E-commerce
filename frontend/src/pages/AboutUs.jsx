@@ -1,15 +1,39 @@
 import React from "react";
-import "../styles/global.css";
+import "../styles/AboutUs.css";
 import CEO from "../assets/images/CEO.png";
 import financemanager from "../assets/images/financemanager.png";
 import marketingmanager from "../assets/images/marketingmanager.png";
 import operationmanager from "../assets/images/operationmanager.png";
 import servicemanager from "../assets/images/servicemanager.png";
+import headerImage from "../assets/stock/header_image_winter_activity-1-1.jpg";
 
 const AboutUsPage = () => {
   return (
     <div>
-      <h1 className="meetTeam">Meet our team</h1>
+      <div className="AboutUsPageHeader">
+        <div className="HeaderBackdrop">
+          <h1 className="headerTitle">About us</h1>
+          <hr className="leftHr"></hr>
+          <span className="leftCircle"></span>
+          <h2>Vision</h2>
+          <h3>
+            To be the ultimate online destination where dog owners find trusted
+            and caring service providers
+          </h3>
+          <hr className="Hr"></hr>
+          <span className="Circle"></span>
+          <h2 className="secondParagraphTitle">Mission</h2>
+          <h3 className="secondParagraphText">
+            To connect passionate and trustworthy dog care providers with caring
+            dog owners, fostering a harmonious relationship built on trust and
+            reliability. We aim to enhance the well-being of dogs and provide
+            peace of mind to their owners, creating a community that celebrates
+            the joy and responsibility of dog ownership.
+          </h3>
+        </div>
+        <img src={headerImage} />
+      </div>
+      <h1 className="teamTitle">Meet our team</h1>
       <div className="all-people-container">
         <div className="about-container">
           <img className="about-pic" src={CEO} alt="CEO" />

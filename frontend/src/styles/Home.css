@@ -146,6 +146,8 @@
     width: 19rem !important;
     font-size: 1.4rem !important;
     background-color: #330099;
+    border-radius: 1rem !important;
+    border-width: 0rem;
   }
 
   .home_banner_small_container button:hover {

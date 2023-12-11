@@ -22,13 +22,13 @@
   }
 
   .button{
+    margin-top: 1.5rem;
     color:whitesmoke !important;
-    font-size: 1rem !important;
-    width: 10rem !important;
-    margin-top: 2rem;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    background-color: rgb(233, 147, 27);
-    border-color: rgb(35, 35, 56);
-    border-radius: 1rem;
+    font-size: 1.2rem !important;
+    font-weight: 900 !important;
+    width: 19rem !important;
+    font-size: 1.4rem !important;
+    background-color: #330099;
+    border-radius: 1rem !important;
+    border-width: 0rem;
   }

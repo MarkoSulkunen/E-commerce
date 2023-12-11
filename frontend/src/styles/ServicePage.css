@@ -1,0 +1,106 @@
+.ServicePageHeader img {
+    object-fit: cover;
+    width: 100%;
+    height: 35rem;
+}
+
+.ServicePageHeader h1 {
+    position: absolute;
+    top: 0rem;
+    left: 2%;
+    font-size: 5rem;
+    font-family: 'Bebas Neue';
+    color: white;
+  }
+
+  .ServicePageHeader h2 {
+    position: absolute;
+    top: 20rem;
+    left: 2%;
+    width: 50rem;
+    font-size: 2rem;
+    text-align: left;
+    font-family: 'Arial Narrow';
+    color: white;
+  }
+
+  .ServicePageHeader .leftHr {
+    position: absolute;
+    top: 17rem;
+    left: 0;
+    width: 34rem;
+    height: 0.2rem;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    border-width:0;
+  }
+
+  .ServicePageHeader .leftCircle {
+    position: absolute;
+    top: 16.45rem;
+    left: 33rem;
+    height: 1.3rem;
+    width: 1.3rem;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.ServicePageContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.ServicePageContainer hr {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
+.ServiceItemContainer{
+    display: flex;
+    gap: 1rem;
+    align-items: top;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 150rem;
+    text-align: left;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .ServiceItemContainer h1 {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    font-size: 5rem;
+    font-family: 'Bebas Neue';
+    color: white;
+    filter: drop-shadow(0.2rem 0.2rem 0.1rem #000000bd);
+  }
+.ServiceItemContainer img {
+    object-fit: cover;
+    margin-left: 2rem;
+    width: 43rem;
+    height: 25rem;
+}
+
+.ServiceItemContainer button {
+    margin-left: 15rem;
+    width: 30rem !important;
+    font-size: 1.7rem !important;
+    height: 4rem;
+    margin: 5rem;
+}
+
+.ServiceTextContainer {
+    font-family: 'Arial Narrow';
+    line-height: 2.4rem;
+    height: 15rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+  
