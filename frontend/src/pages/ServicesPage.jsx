@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/ServicePage.css";
 import ServiceList from "../components/services/ServiceList";
 import Button from "../components/button/Button";
@@ -11,10 +11,14 @@ import dogboardingImage from "../assets/stock/wallpaper2you_256306.jpg";
 const ServicesPage = () => {
   // State to track the selected service name
   const [selectedService, setSelectedService] = useState(null);
+  const serviceListRef = useRef(null);
 
   // Function to handle button click and set the selected service name
   const handleButtonClick = (serviceName) => {
     setSelectedService(serviceName);
+    if (serviceListRef.current) {
+      serviceListRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -114,6 +118,7 @@ const ServicesPage = () => {
           items={[]}
           selectedService={selectedService}
           hideSearchBar={true}
+          ref={serviceListRef}
         />
       )}
     </div>

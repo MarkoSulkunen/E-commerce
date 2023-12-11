@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useQuery } from "react-query";
 import ServiceItem from "./ServiceItem";
 import SearchBar from "../search/SearchBar";
 import { getServices } from "../../api/services";
 import "../../styles/ServiceList.css";
 
-const ServiceList = ({ items, selectedService, hideSearchBar }) => {
+const ServiceList = React.forwardRef(({ items, selectedService, hideSearchBar }, ref) => {
   // Querying services data
   const { data: services, isLoading } = useQuery("services", getServices, {
     refetchOnWindowFocus: false,
@@ -74,8 +74,10 @@ const ServiceList = ({ items, selectedService, hideSearchBar }) => {
           <p>No services found.</p>
         )
       )}
-    </>
+   <div ref={ref}>
+   </div>
+  </>
   );
-};
+});
 
 export default ServiceList;
