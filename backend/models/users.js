@@ -1,6 +1,13 @@
 const pool = require('../db/pool');
 
 const users = {
+/*###############################################################################
+
+ METHOD NAME: create
+
+ DESCRIPTION: Creates a new user in the database
+
+##################################################################################*/
   create: (user) => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if(err) {
@@ -17,6 +24,13 @@ const users = {
       });
     });
   }),
+/*###############################################################################
+
+ METHOD NAME: findByEmail
+
+ DESCRIPTION: Retrieves user by email from the database
+
+##################################################################################*/
   findByEmail: (email) => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if(err) {
@@ -31,7 +45,13 @@ const users = {
       });
     });
   }),
+/*###############################################################################
 
+ METHOD NAME: findUserById
+
+ DESCRIPTION: Retrieves user by id from the database
+
+##################################################################################*/
   findUserById: (id) => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if (err) {
@@ -47,7 +67,13 @@ const users = {
       });
     });
   }),
+/*###############################################################################
 
+ METHOD NAME: findAll
+
+ DESCRIPTION: Fetches all users from the database
+
+##################################################################################*/
   findAll: () => new Promise((resolve, reject) => {
     pool.getConnection((err, connection) => {
       if(err) {
@@ -62,7 +88,13 @@ const users = {
       });
     });
   }),
+/*###############################################################################
 
+ METHOD NAME: deleteById
+
+ DESCRIPTION: Deletes user by id from the database
+
+##################################################################################*/
   deleteById: (id) => new Promise((resolve, reject) => {
     const deleteQuery = 'DELETE FROM users WHERE id=?;';
     pool.getConnection((err, connection) => {
@@ -78,40 +110,6 @@ const users = {
       });
     });
   }),
-
-
-  //Logiikka salasanan vaihtoon
-
-  /*setNewPassword: (email, token, hashedPassword) => new Promise((resolve, reject) => {
-    pool.getConnection((err, connection) => {
-      if(err) {
-        return reject(err);
-      }
-      connection.query('UPDATE users SET password = ? WHERE email = ? AND reset_token = ?;', [hashedPassword, email,token], (err, result) => {
-        connection.release();
-        if(err) {
-          return reject(err);
-        }
-        resolve(result);
-      });
-    });
-  }),
-
- /* updateResetToken: (email, resetToken) => new Promise((resolve, reject) => {
-    pool.getConnection((err, connection) => {
-      if(err) {
-        return reject(err);
-      }
-      connection.query('UPDATE users SET reset_token = ? WHERE email = ?;', [resetToken, email], (err, result) => {
-        connection.release();
-        if(err) {
-          return reject(err);
-        }
-        resolve(result);
-      });
-    });
-  })*/
-  
 };
 
 module.exports = users;

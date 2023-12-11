@@ -3,11 +3,7 @@ const pool = require('../db/pool');
 const services = {
 /*###############################################################################
 
- METHOD DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: findAll
+ METHOD NAME: findAll
 
  DESCRIPTION: Retrieves all services from the database
 
@@ -31,11 +27,7 @@ const services = {
 
 /*###############################################################################
 
- METHOD DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: findServicesById
+ METHOD NAME: findServicesById
 
  DESCRIPTION: Retrieves service by id from the database
 
@@ -58,11 +50,7 @@ const services = {
 
 /*###############################################################################
 
- METHOD DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: create
+ METHOD NAME: create
 
  DESCRIPTION: Creates a new service in the database
 
@@ -86,11 +74,7 @@ const services = {
 
 /*###############################################################################
 
- METHOD DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: deleteById
+ METHOD NAME: deleteById
 
  DESCRIPTION: Deletes a service by id from the database
 
@@ -114,11 +98,7 @@ const services = {
 
 /*###############################################################################
 
- METHOD DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: updateById
+ METHOD NAME: updateById
 
  DESCRIPTION: Edits a service by id in the database
 

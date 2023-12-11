@@ -4,6 +4,13 @@ const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [locationQuery, setLocationQuery] = useState("");
 
+/*###############################################################################
+
+ FUNCTION NAME: handleSearch
+
+ DESCRIPTION: Sends search query and location to parent component.
+
+################################################################################*/
   const handleSearch = () => {
     console.log("search:", searchQuery, "location:", locationQuery);
     onSearch(searchQuery, locationQuery);
@@ -13,15 +20,15 @@ const SearchBar = ({ onSearch }) => {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Search services..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="Enter the location"
+        value={locationQuery}
+        onChange={(e) => setLocationQuery(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Search by location..."
-        value={locationQuery}
-        onChange={(e) => setLocationQuery(e.target.value)}
+        placeholder="Choose a service"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
     </div>

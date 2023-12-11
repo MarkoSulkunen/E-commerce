@@ -3,15 +3,11 @@ const services = require('../models/services');
 
 /*###############################################################################
 
- FUNCTION DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: getServices
+ FUNCTION NAME: getServices
 
  DESCRIPTION: Retrieves all services from the database
 
-##################################################################################*/
+################################################################################*/
 const getServices = async (req, res) => {
   try {
     const response = await services.findAll();
@@ -30,15 +26,11 @@ const getServices = async (req, res) => {
 
 /*###############################################################################
 
- FUNCTION DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: getServicesById
+ FUNCTION NAME: getServicesById
 
  DESCRIPTION: Retrieves service by id from the database
 
-##################################################################################*/
+################################################################################*/
 const getServicesById = async (req, res) => {
     try {
       const id = parseInt(req.params.id);
@@ -55,15 +47,11 @@ const getServicesById = async (req, res) => {
   
 /*###############################################################################
 
- FUNCTION DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: createServices
+ FUNCTION NAME: createServices
 
  DESCRIPTION: Creates a new service in the database
 
-##################################################################################*/
+################################################################################*/
   const createServices= async (req, res) => {
     const schema = Joi.object({
       service: Joi.string().required(),
@@ -113,15 +101,11 @@ const getServicesById = async (req, res) => {
 
 /*###############################################################################
 
- FUNCTION DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: deleteServices
+ FUNCTION NAME: deleteServices
 
  DESCRIPTION: Deletes a service by id from the database
 
-##################################################################################*/
+################################################################################*/
 const deleteServices = async (req, res) => {
     try {
       const id = parseInt(req.params.id);
@@ -136,11 +120,7 @@ const deleteServices = async (req, res) => {
 
 /*###############################################################################
 
- FUNCTION DESCRIPTION
-
------------------------------------------------------------------------------------
-
- NAME: editService
+ FUNCTION NAME: editService
 
  DESCRIPTION: Edits a service by id in the database
 
