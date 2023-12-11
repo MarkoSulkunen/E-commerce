@@ -21,7 +21,7 @@ const Home = () => {
           <h4>WELCOME TO</h4>
           <hr></hr>
           <h2 className="home_banner_small_text">
-            We are and online platform who helps to connect dog owners looking
+            We are an online platform who helps to connect dog owners looking
             for dog babysitting services and people who are willing to host and
             take care of the dogs.
           </h2>

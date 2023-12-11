@@ -110,8 +110,8 @@ nav a {
 
 .about-container {
   position: relative;
-  height: 28rem;
-  width: 18rem;
+  height: 23rem;
+  width: 16rem;
   text-align: center;
   border: 0.3rem solid var(--DWOrange);
 }
@@ -124,7 +124,7 @@ nav a {
   animation: 1s ease-out 0s 1 fadeIn;
 }
 
-.info-container{
+.info-container {
   position: absolute;
   bottom: 0rem;
   width: 100%;
@@ -179,11 +179,13 @@ nav a {
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
 
 .react-calendar {
   width: 40rem !important;
@@ -204,7 +206,7 @@ nav a {
 
   .react-calendar__month-view__days {
     display: grid !important;
-    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%; 
+    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
 
     .react-calendar__tile {
       max-width: initial !important;
@@ -222,11 +224,11 @@ nav a {
   .react-calendar__tile--range {
     background-color: rgb(113, 71, 14);
     box-shadow: 0 0 6px 2px black;
-}
+  }
 
   /* ~~~ other view styles ~~~ */
-  .react-calendar__year-view__months, 
-  .react-calendar__decade-view__years, 
+  .react-calendar__year-view__months,
+  .react-calendar__decade-view__years,
   .react-calendar__century-view__decades {
     display: flex;
     align-items: center;
@@ -239,6 +241,12 @@ nav a {
     &.react-calendar__year-view__months {
       grid-template-columns: 20% 20% 20% 20%;
     }
+  }
+}
 
+@media screen and (max-width: 1200px) {
+  .all-people-container {
+    justify-content: center;
+    align-items: center;
   }
 }

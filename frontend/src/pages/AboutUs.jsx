@@ -70,12 +70,18 @@ const AboutUsPage = () => {
       </div>
       <div className="about_info_container">
         <h2>
-          We are an online platform that helps connect dog owners looking for
-          babysitting services with people willing to host and care for dogs for
-          a short period. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+          At Doggy Woogy, we're more than just a platform; we're a passionate
+          team dedicated to the well-being of your beloved furry companions. Our
+          diverse team brings together a wealth of experience, expertise, and,
+          above all, a profound love for dogs.
         </h2>
-        <br/>
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+        <br />
+        <h2>
+          Our team of caregivers is a collection of animal enthusiasts who've
+          turned their passion into a profession. With backgrounds in pet care,
+          veterinary services, and animal behaviour, they're not just providers;
+          they're your pet's second family.
+        </h2>
       </div>
     </div>
   );

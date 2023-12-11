@@ -43,7 +43,7 @@ const Navbar = () => {
           )}
         </li>
         <li>
-          <NavLink to="/contactpage">Contact Us</NavLink>
+          <NavLink to="/contactpage">Contact us</NavLink>
         </li>
         <li>
           <NavLink to="/aboutus">About us</NavLink>
@@ -60,17 +60,17 @@ const Navbar = () => {
         )}
         {!auth.isLoggedIn && (
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/login"  className="UserButton">Login</NavLink>
         </li>
       )}
             {!auth.isLoggedIn && (
         <li>
-          <NavLink to="/signup">SignUp</NavLink>
+          <NavLink to="/signup"  className="UserButton">SignUp</NavLink>
         </li>
       )}
         {auth.isLoggedIn && (
         <li>
-          <button onClick={auth.logout}>LOGOUT</button>
+          <button onClick={auth.logout} className="UserButton">LOGOUT</button>
         </li>
       )}
       </ul>
