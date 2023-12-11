@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useQuery } from "react-query";
-
-import ServiceList from "../components/services/ServiceList";
+import MyServiceList from "../components/services/MyServiceList";
 import { AuthContext } from "../context/auth-context";
-
 import { getServicesById } from "../api/services";
 
 const MyServices = () => {
@@ -15,14 +13,8 @@ const MyServices = () => {
     { enabled: !!userId }
   );
 
-  console.log(data);
-
   if (isLoading) {
-    return (
-      <div className="center">
-        Loading...
-      </div>
-    );
+    return <div className="center">Loading...</div>;
   }
 
   if (error) {
@@ -32,7 +24,12 @@ const MyServices = () => {
   // Filters the data array to only show the services owned by authenticated user
   const userServices = data.filter((service) => service.userId === userId);
 
-  return <ServiceList items={userServices} />;
+
+  return (
+    <MyServiceList
+      items={userServices || []}
+    />
+  );
 };
 
 export default MyServices;

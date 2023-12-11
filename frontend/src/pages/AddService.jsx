@@ -74,7 +74,7 @@ const AddService = () => {
   };
 
   return (
-    <form className="product-form" onSubmit={serviceSubmitHandler}>
+    <form className="contact-container" onSubmit={serviceSubmitHandler}>
       <Input ref={serviceRef} type="text" label="Service" id="service-name" />
       <Input ref={priceRef} type="text" label="Price" id="service-price" />
       <Input ref={infoRef} type="text" label="Info" id="service-info" />
