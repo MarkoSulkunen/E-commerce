@@ -5,31 +5,6 @@ import SearchBar from "../search/SearchBar";
 import { getServices } from "../../api/services";
 import "../../styles/ServiceList.css";
 
-const testServices = [
-  {
-    id: 1,
-    service: "Service 1",
-    price: 50,
-    info: "Info",
-    name: "testuser",
-    contact: "test@email.com",
-    location: "Location 1",
-    image: "image",
-    userId: 101,
-  },
-  {
-    id: 2,
-    service: "Service 2",
-    price: 30,
-    info: "Info 2",
-    name: "usertest",
-    contact: "test2@email.com",
-    location: "Location 2",
-    image: "Image_2",
-    userId: 102,
-  },
-];
-
 const ServiceList = React.forwardRef(({ items, selectedService, hideSearchBar }, ref) => {
   // Querying services data
   const { data: services, isLoading } = useQuery("services", getServices, {
@@ -37,7 +12,7 @@ const ServiceList = React.forwardRef(({ items, selectedService, hideSearchBar },
   });
 
   // Checking if items prop exists and using it as the service list if it does, otherwise using services from the API
-  const serviceList = items.length > 0 ? items : testServices;
+  const serviceList = items.length > 0 ? items : services;
 
   // State for search query
   const [searchQuery, setSearchQuery] = React.useState("");
