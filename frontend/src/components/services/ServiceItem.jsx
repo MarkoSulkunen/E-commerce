@@ -8,7 +8,7 @@ import { AuthContext } from "../../context/auth-context";
 import { Link } from "react-router-dom";
 import Modal from "../modal/Modal";
 
-import "../../styles/ServiceItem.css";
+import "../../styles/ServiceComponents.css";
 import { deleteServices, editService } from "../../api/services";
 
 const ServiceItem = (props) => {

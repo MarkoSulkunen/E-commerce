@@ -300,3 +300,16 @@ nav a {
     align-items: center;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .search-bar {
+    flex-direction: column;
+    width: 23rem;
+    gap: 1rem;
+  }
+
+  .ContactPageContainer {
+    margin-left: 1rem;
+    width: auto;
+  }
+}

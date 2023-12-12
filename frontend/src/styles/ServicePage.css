@@ -11,6 +11,7 @@
     font-size: 5rem;
     font-family: 'Bebas Neue';
     color: white;
+    filter: drop-shadow(0.2rem 0.2rem 0.1rem #000000bd);
   }
 
   .ServicePageHeader h2 {
@@ -22,6 +23,7 @@
     text-align: left;
     font-family: 'Arial Narrow';
     color: white;
+    filter: drop-shadow(0.2rem 0.2rem 0.1rem #000000bd);
   }
 
   .ServicePageHeader .leftHr {
@@ -61,6 +63,7 @@
 
 .ServiceItemContainer{
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     align-items: top;
     align-self: center;
@@ -81,6 +84,7 @@
     color: white;
     filter: drop-shadow(0.2rem 0.2rem 0.1rem #000000bd);
   }
+
 .ServiceItemContainer img {
     object-fit: cover;
     margin-left: 2rem;
@@ -103,4 +107,72 @@
     margin: 1rem;
     padding: 1rem;
 }
-  
+
+@media screen and (max-width: 1200px) {
+  .ServiceItemContainer h1 {
+    font-size: 3rem;
+  } 
+
+  .ServiceItemContainer img {
+    width: 23rem;
+    height: 25rem;
+  }
+
+  .ServiceItemContainer button {
+    margin-top: 1rem;
+  }
+
+  .ServicePageHeader .leftHr {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ServiceItemContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8rem;
+  }
+  .ServiceItemContainer button {
+    margin-left: 1rem;
+  }
+
+  .ServicePageHeader h2 {
+    width: 30rem;
+  }
+
+  .ServicePageHeader h2 {
+    top: 18rem;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ServiceItemContainer {
+    margin-bottom: 23rem;
+  }
+
+  .ServiceItemContainer h2 {
+    width: 20rem;
+    text-align: center;
+  }
+
+  .ServiceTextContainer {
+    margin: 0rem;
+    padding: 0rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .ServiceItemContainer button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem !important;
+  }
+
+  .ServicePageHeader h2 {
+    width: 25rem;
+    font-size: 1.8rem;
+  }
+}

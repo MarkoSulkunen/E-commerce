@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import ServiceItem from "./ServiceItem";
 import { getServices } from "../../api/services";
-import "../../styles/ServiceList.css";
+import "../../styles/ServiceComponents.css";
 
 const MyServiceList = ({ items }) => {
   // Querying services data
