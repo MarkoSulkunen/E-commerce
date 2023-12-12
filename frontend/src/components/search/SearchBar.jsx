@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { searchSymbol } from "../../assets/symbols/common";
 
 const SearchBar = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -30,7 +31,7 @@ const SearchBar = ({ onSearch }) => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch}>{searchSymbol}</button>
     </div>
   );
 };

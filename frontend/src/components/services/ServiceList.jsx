@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import ServiceItem from "./ServiceItem";
 import SearchBar from "../search/SearchBar";
 import { getServices } from "../../api/services";
-import "../../styles/ServiceList.css";
+import "../../styles/ServiceComponents.css";
 
 const ServiceList = React.forwardRef(({ items, selectedService, hideSearchBar }, ref) => {
   // Querying services data

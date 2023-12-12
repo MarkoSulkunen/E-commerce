@@ -184,6 +184,41 @@ nav a {
   margin-top: 2rem;
 }
 
+.search-bar {
+  width: 60rem;
+  background-color: #CFDFFF;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  height: 3rem;
+  width: 15rem;
+  border-radius: 0.5rem;
+  font-family: 'Arial';
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.search-bar button {
+  border-radius: 5rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: #20319B;
+}
+
+.search-bar button svg {
+  filter: invert(100%);
+}
+
 @keyframes slideIn {
   0% {
     transform: translateY(100%);
@@ -263,5 +298,18 @@ nav a {
   .all-people-container {
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .search-bar {
+    flex-direction: column;
+    width: 23rem;
+    gap: 1rem;
+  }
+
+  .ContactPageContainer {
+    margin-left: 1rem;
+    width: auto;
   }
 }

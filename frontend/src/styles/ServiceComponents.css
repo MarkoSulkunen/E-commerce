@@ -1,0 +1,125 @@
+.service-item {
+    margin: 4rem 0;
+    height: 35rem;
+    border-radius: 5rem 0rem;
+    margin-right: 2rem;
+    font-family: 'Bebas Neue';
+    letter-spacing: 0.1rem;
+    background-color: whitesmoke !important;
+  }
+
+  .service-item {
+    transition: transform .2s;
+  }
+  
+  .service-item:hover {
+    transform: scale(1.05);
+  }
+
+  .service-item__content {
+    padding: 0;
+  }
+  
+  .service-item__info {
+    padding: 0rem;
+    text-align: center;
+  }
+
+  .service-item__info h2 {
+    margin-top: 1rem !important;
+    font-size: 2rem;
+  }
+
+  .service-item__info .price {
+    color: white;
+    background-color: #20319B;
+    font-size: 2rem;
+  }
+
+  .service-item__image {
+    width: 100%;
+    height: 18rem !important;
+    margin-right: 1.5rem;
+  }
+  
+  .service-item__image img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 5rem 0rem;
+  }
+
+  .service-item__info h2,
+  .service-item__info h3 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .service-item__actions {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+
+  .service-item__modal-content {
+    padding: 0;
+  }
+
+  .service-item__modal-actions {
+    text-align: right;
+  }
+
+  .service-item__actions button,
+  .service-item__actions a {
+    margin: 0.5rem;
+  }
+
+  @media (min-width: 1200px) {
+    .service-item {
+      width: 25rem;
+    }
+
+    .service-item__image {
+      height: 10rem;
+    } 
+  }
+
+  @media (min-width: 768px) {
+    .service-item__image {
+      height: 10rem;
+    } 
+  }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .service-list li {
+    flex-basis: calc(50% - 1rem);
+    margin: 0.5rem;
+    vertical-align: top;
+  }
+  
+  .service-form {
+    list-style: none;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 90%;
+    max-width: 40rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    background: white;
+  }
+
+  @media screen and (max-width: 768px) {
+    .service-list li {
+      flex-basis: 100%;
+    }
+  }

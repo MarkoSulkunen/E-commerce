@@ -8,7 +8,7 @@ import { AuthContext } from "../../context/auth-context";
 import { Link } from "react-router-dom";
 import Modal from "../modal/Modal";
 
-import "../../styles/ServiceItem.css";
+import "../../styles/ServiceComponents.css";
 import { deleteServices, editService } from "../../api/services";
 
 const ServiceItem = (props) => {
@@ -208,13 +208,12 @@ const ServiceItem = (props) => {
       </Modal>
       <Card className="service-item">
         <div className="service-item__info">
-          <h3>{props.name}</h3>
           <div className="service-item__image">
             <img src={props.image} />
           </div>
           <h2>{props.service}</h2>
           <p>{props.info}</p>
-          <p>{props.price}€</p>
+          <p className="price">{props.price}€</p>
           <p>Location: {props.location}</p>
           <h3>
             Contact:{" "}

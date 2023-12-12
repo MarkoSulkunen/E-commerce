@@ -2,8 +2,6 @@ import { useRef, useContext } from "react";
 import { useMutation, useQueryClient, useQuery } from "react-query";
 import { useNavigate } from 'react-router-dom';
 
-import "../styles/AddService.css";
-
 import Input from "../components/input/Input";
 import Button from "../components/button/Button";
 import { AuthContext } from "../context/auth-context";
